@@ -1,0 +1,50 @@
+# ---- Project files ----
+HELP.md
+
+# ---- Build output ----
+target/
+build/
+
+# ---- Maven wrapper ----
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ---- IDEs ----
+
+## IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+## Eclipse / Spring Tool Suite (STS)
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## VS Code
+.vscode/
+
+# ---- Logs & temp ----
+logs/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
