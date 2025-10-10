@@ -1,5 +1,10 @@
 # 📚 Book Manager API
 
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.0-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+![Docker](https://img.shields.io/badge/Docker-Compose-blue)
+
 Простое REST-приложение на **Spring Boot** для управления списком книг.  
 Данные хранятся в **PostgreSQL**, проект запускается через **Docker Compose**.  
 Используются Lombok, Spring Data JPA и Maven.
