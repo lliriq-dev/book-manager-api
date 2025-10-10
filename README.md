@@ -16,7 +16,7 @@
 1. Установите [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 2. Клонируйте репозиторий:
    git clone https://github.com/lliriq-dev/book-manager-api.git  
-   cd bookmanager
+   cd book-manager-api
 3. Запустите проект:
    docker compose up
 
