@@ -48,3 +48,11 @@ logs/
 # ---- OS files ----
 .DS_Store
 Thumbs.db
+
+# ---- Docker ----
+/postgres_data/
+*.pid
+
+# ---- Environment ----
+.env
+

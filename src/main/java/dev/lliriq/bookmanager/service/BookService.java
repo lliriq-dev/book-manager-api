@@ -1,31 +1,33 @@
 package dev.lliriq.bookmanager.service;
 
 import dev.lliriq.bookmanager.model.Book;
+import dev.lliriq.bookmanager.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
 
 @Service
 public class BookService {
 
-    private final Map<Long, Book> books = new HashMap<>();
-    private long nextId = 1;
+    private final BookRepository repository;
+
+    public BookService(BookRepository repository) {
+        this.repository = repository;
+    }
 
     public List<Book> getAll() {
-        return new ArrayList<>(books.values());
+        return repository.findAll();
     }
 
     public Book add(Book book) {
-        book.setId(nextId++);
-        books.put(book.getId(), book);
-        return book;
+        return repository.save(book);
     }
 
     public Book getById(Long id) {
-        return books.get(id);
+        return repository.findById(id).orElse(null);
     }
 
     public void delete(Long id) {
-        books.remove(id);
+        repository.deleteById(id);
     }
 }
