@@ -5,6 +5,7 @@ import dev.lliriq.bookmanager.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/books")
@@ -35,5 +36,25 @@ public class BookController {
     @DeleteMapping("/{id}")
     public void deleteBook(@PathVariable Long id) {
         bookService.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public Book updateBook(@PathVariable Long id, @RequestBody Book updatedBook) {
+        return bookService.update(id, updatedBook);
+    }
+
+    @GetMapping("/{author}")
+    public List<Book> getBooksByAuthor(@PathVariable String author) {
+        return bookService.findByAuthor(author);
+    }
+
+    @GetMapping("/{year}")
+    public List<Book> getBooksByYear(@PathVariable Short year) {
+        return bookService.findByYear(year);
+    }
+
+    @GetMapping("/{title}")
+    public List<Book> getBooksByTitle(@PathVariable String title) {
+        return bookService.findByTitle(title);
     }
 }
